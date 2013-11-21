@@ -27,7 +27,7 @@ footer {
 	height: 150px;
 }
 .top-nav > ul{
-	display: block;
+	display: block !important;
 }
 @media only screen and (max-width : 480px) {
 	.post {
