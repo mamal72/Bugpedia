@@ -29,6 +29,18 @@ footer {
 .top-nav {
 	display: block;
 }
-.post-wrapper {
-	padding: 0 3em;
+@media only screen and (max-width : 480px) {
+	.post {
+		padding: 1em;
+	}
+}
+@media (min-width: 480px) {
+	.post {
+		padding: 2em;
+	}
+	}
+@media (min-width: 980px) {
+	.post {
+		padding: 0 3em;
+	}
 }
