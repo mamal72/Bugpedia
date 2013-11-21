@@ -26,7 +26,7 @@ aside {
 footer {
 	height: 150px;
 }
-.top-nav {
+.top-nav > ul{
 	display: block;
 }
 @media only screen and (max-width : 480px) {
