@@ -220,6 +220,7 @@ blockquote {
  pre {
     margin: 1em 0;
     line-height: 1.7;
+    color: #525252;
 }
 
 /**
@@ -1924,7 +1925,6 @@ a.pure-button-selected {
 
 .pure-menu.pure-menu-open,
 .pure-menu.pure-menu-horizontal li .pure-menu-children {
-    background: #fff; /* Old browsers */
     border: 1px solid #b7b7b7;
 }
 
@@ -1946,7 +1946,7 @@ a.pure-button-selected {
 
 .pure-menu a,
 .pure-menu .pure-menu-can-have-children > li:after {
-    color: #777;
+    color: #fff;
 }
 
 .pure-menu .pure-menu-can-have-children > li:hover:after {
@@ -1961,7 +1961,7 @@ a.pure-button-selected {
 
 .pure-menu li a:hover,
 .pure-menu li a:focus {
-    background: #eee;
+    color: #eee;
 }
 
 /* DISABLED STATES */
