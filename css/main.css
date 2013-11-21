@@ -1,3 +1,25 @@
+@font-face {
+  font-family: 'Yekan';
+  src: url('fonts/BYekan.eot?#') format('eot'),  /* IE6–8 */
+       url('fonts/BYekan.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+       url('fonts/BYekan.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+@font-face {
+  font-family: 'Titr';
+  src: url('fonts/BTitrBold.eot?#') format('eot'),  /* IE6–8 */
+       url('fonts/BTitrBold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+       url('fonts/BTitrBold.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
 body {
-	background: #555;
+	background: #F1F4F9;
+	direction: rtl;
+}
+header {
+	height: 100px;
+}
+main {
+
+}
+footer {
+	height: 150px;
 }

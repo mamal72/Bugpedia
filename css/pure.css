@@ -91,7 +91,7 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
  input,
  select,
  textarea {
-    font-family: sans-serif;
+    font-family: 'Yekan', tahoma, sans-serif;
 }
 
 /**
