@@ -219,6 +219,7 @@ blockquote {
  p,
  pre {
     margin: 1em 0;
+    line-height: 1.7;
 }
 
 /**
