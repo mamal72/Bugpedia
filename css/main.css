@@ -36,6 +36,9 @@ footer {
 	.post {
 		padding: 2em;
 	}
+	.post p {
+		padding: 1em 2em;
+	}
 }
 @media (min-width: 980px) {
 	.post {
