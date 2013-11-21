@@ -26,9 +26,6 @@ aside {
 footer {
 	height: 150px;
 }
-.top-nav > ul {
-	display: block !important;
-}
 @media (min-width: 480px) {
 	.post {
 		padding: 2em;

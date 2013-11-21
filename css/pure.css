@@ -1834,11 +1834,11 @@ a.pure-button-selected {
     vertical-align: middle;
 }
 .pure-menu.pure-menu-horizontal > ul {
-    display: inline-block;
+    display: block;
     *display: inline;
     zoom: 1;
     vertical-align: middle;
-    height: 2.4em;
+    height: auto;
 }
 
 .pure-menu li a { padding: 5px 20px; }
