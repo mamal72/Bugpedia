@@ -91,7 +91,7 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
  input,
  select,
  textarea {
-    font-family: 'Yekan', tahoma, sans-serif;
+    font-family: 'Mitra', tahoma, sans-serif;
 }
 
 /**
@@ -221,7 +221,6 @@ blockquote {
     margin: 1em 0;
     line-height: 1.7;
     color: #525252;
-    text-align: justify;
 }
 
 /**

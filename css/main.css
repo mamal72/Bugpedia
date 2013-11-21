@@ -1,4 +1,10 @@
 @font-face {
+	font-family: 'Mitra';
+	src: url('fonts/BMitra.eot?#') format('eot'),  /* IE6–8 */
+	url('fonts/BMitra.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+	url('fonts/BMitra.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+@font-face {
 	font-family: 'Yekan';
 	src: url('fonts/BYekan.eot?#') format('eot'),  /* IE6–8 */
 	url('fonts/BYekan.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
@@ -31,7 +37,12 @@ footer {
 	background: #fff;
 	border-radius: 5px;
 }
-
+.post-title {
+	font-family: 'Yekan', tahoma;
+}
+.post-content {
+	font-size: 1.2rem;
+}
 @media (min-width: 480px) {
 	.post {
 		padding: 2em;
