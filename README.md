@@ -1,2 +1,2 @@
-Bugpedia
-========
+# Bugpedia
+Bugpedia website template.
