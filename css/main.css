@@ -24,9 +24,11 @@ header, footer {
 	height: 100px;
 	background: #2A80C9;
 }
-header h1 {
+header .logo {
 	font-size: 4em;
 	margin: 0.2em 1em;
+	color: #FFF;
+	text-shadow: 1px 1px 8px #575757;
 }
 main {
 
