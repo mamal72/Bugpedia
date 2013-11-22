@@ -23,9 +23,6 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-logo:before {
-	content: "\e62a";
-}
 .icon-plus:before {
 	content: "\e62b";
 }
@@ -151,4 +148,7 @@
 }
 .icon-notification:before {
 	content: "\e654";
+}
+.icon-logo:before {
+	content: "\e600";
 }
