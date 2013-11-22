@@ -24,6 +24,10 @@ header, footer {
 	height: 100px;
 	background: #2A80C9;
 }
+header h1 {
+	font-size: 4em;
+	margin: 0.2em 1em;
+}
 main {
 
 }
@@ -36,6 +40,9 @@ footer {
 	margin: 2em 2em 2em 0;
 	background: #fff;
 	border-radius: 5px;
+}
+.post-title {
+	font-weight: normal;
 }
 .post-content {
 	font-size: 1.2rem;
