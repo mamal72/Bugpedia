@@ -51,6 +51,13 @@ header div a, header div span {
   color: white;
   position: relative;
   margin: 0 .5em;
+  transition: color .2s ease-out;
+  cursor: pointer;
+}
+
+header div span:hover {
+  color: #025391;
+  transition: color .2s ease-out;
 }
 
 header div span:before {
@@ -60,6 +67,7 @@ header div span:before {
   left: 50%;
   font-size: 0.3em;
   opacity: 0;
+  color: white;
   transition: opacity .2s ease-out, text-shadow .2s ease-out;
   text-shadow: 0 0 white, 0 0 white;
 }
@@ -69,34 +77,39 @@ header div span:hover:before {
   opacity: 1;
 }
 
-header div a:hover:before, header div a:hover:after {
+header div a:before, header div a:after {
+  position: absolute;
+  top: 5%;
+  font-size: 1em;
+  font-family: arial;
+  font-weight: 50;
+  opacity: 0;
+  transition: left .2s ease-out, opacity .2s ease-out;
+  color: white;
+}
+header div a:before {
+  content: ']';
+  left: -8%;
+}
+header div a:after {
+  content: '[';
+  left: 102%;
+}
+
+header div a:hover:after, header div a:hover:before {
   opacity: 1;
-  transition: all .2s ease-out;
+  transition: left .2s ease-out, opacity .2s ease-out;
+}
+
+header div a:hover {
+  color: #025391
+}
+
+header div a:hover:after {
+  left: 110%;
 }
 header div a:hover:before {
-  top: -5%;
-}
-header div a:hover:after {
-  top: 105%;
-}
-
-header div a:before, header div a:after {
-  content: '';
-  width: 120%;
-  height: 0;
-  border-top: 2px solid white;
-  position: absolute;
-  left: -10%;
-  opacity: 0;
-  transition: all .2s ease-out;
-}
-
-header div a:before {
-  top: -20%;
-}
-
-header div a:after {
-  top: 120%;
+  left: -16%;
 }
 
 main {
