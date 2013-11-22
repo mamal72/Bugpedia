@@ -25,11 +25,80 @@ header, footer {
 	background: #2A80C9;
 }
 header .logo {
-	font-size: 4em;
-	margin: 0.2em 1em;
-	color: #FFF;
-	text-shadow: 1px 1px 8px #575757;
+  font-size: 4em;
+  margin: 0.3em 2em 0.3em 1em;
+  color: #FFF;
+  /*text-shadow: 1px 1px 8px #575757;*/
+  float: right;
+  transition: all .2s ease-out;
+  text-decoration: none;
 }
+
+header .logo:hover {
+  opacity: .7;
+  transition: all .2s ease-out;
+}
+
+header div {
+  float: right;
+  margin: 1.6em 2em;
+  font-family: 'Mitra';
+  font-size: 20px;
+}
+
+header div a, header div span {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  margin: 0 .5em;
+}
+
+header div span:before {
+  content: '•';
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  font-size: 0.3em;
+  opacity: 0;
+  transition: opacity .2s ease-out, text-shadow .2s ease-out;
+  text-shadow: 0 0 white, 0 0 white;
+}
+
+header div span:hover:before {
+  text-shadow: -10px 0 white, 10px 0 white;
+  opacity: 1;
+}
+
+header div a:hover:before, header div a:hover:after {
+  opacity: 1;
+  transition: all .2s ease-out;
+}
+header div a:hover:before {
+  top: -5%;
+}
+header div a:hover:after {
+  top: 105%;
+}
+
+header div a:before, header div a:after {
+  content: '';
+  width: 120%;
+  height: 0;
+  border-top: 2px solid white;
+  position: absolute;
+  left: -10%;
+  opacity: 0;
+  transition: all .2s ease-out;
+}
+
+header div a:before {
+  top: -20%;
+}
+
+header div a:after {
+  top: 120%;
+}
+
 main {
 
 }
