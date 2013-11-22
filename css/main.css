@@ -79,7 +79,7 @@ header div span:hover:before {
 
 header div a:before, header div a:after {
   position: absolute;
-  top: 5%;
+  bottom: 5%;
   font-size: 1em;
   font-family: arial;
   font-weight: 50;
