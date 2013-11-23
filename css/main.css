@@ -28,7 +28,7 @@ header .logo {
   font-size: 4em;
   margin: 0.3em 2em 0.3em 1em;
   color: #FFF;
-  /*text-shadow: 1px 1px 8px #575757;*/
+  text-shadow: 1px 1px 8px #575757;
   float: right;
   transition: all .2s ease-out;
   text-decoration: none;
@@ -53,6 +53,7 @@ header div a, header div span {
   margin: 0 .5em;
   transition: color .2s ease-out;
   cursor: pointer;
+  text-shadow: 1px 1px 8px #575757;
 }
 
 header div span:hover {
