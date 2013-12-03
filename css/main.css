@@ -16,6 +16,15 @@
 	url('fonts/BTitrBold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 	url('fonts/BTitrBold.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
 }
+
+a:focus {
+  outline: none;
+}
+
+*::-moz-focus-inner {
+  border: none;
+}
+
 body {
 	background: #F1F4F9;
 	direction: rtl;
@@ -46,71 +55,148 @@ header div {
   font-size: 20px;
 }
 
-header div a, header div span {
+header a {
   text-decoration: none;
   color: white;
   position: relative;
-  margin: 0 .5em;
-  transition: color .2s ease-out;
+  margin: 0 1em;
+  transition: color .2s ease-out, text-shadow .2s ease-out;
   cursor: pointer;
   text-shadow: 1px 1px 8px #575757;
 }
 
-header div span:hover {
+header a:hover {
   color: #87CBFF;
-  transition: color .2s ease-out;
+  text-shadow: 1px 1px 8px #304856;
 }
 
-header div span:before {
-  content: '•';
-  position: absolute;
-  top: 105%;
-  left: 50%;
-  font-size: 0.3em;
-  opacity: 0;
-  color: white;
-  transition: opacity .2s ease-out, text-shadow .2s ease-out;
-  text-shadow: 0 0 white, 0 0 white;
-}
-
-header div span:hover:before {
-  text-shadow: -10px 0 white, 10px 0 white;
-  opacity: 1;
-}
-
-header div a:before, header div a:after {
-  position: absolute;
-  bottom: 1%;
+header .links a:before, header .links a:after {
+  display: inline-block;
   font-size: .9em;
   font-family: 'Mitra';
   font-weight: bold;
   opacity: 0;
-  transition: left .2s ease-out, opacity .2s ease-out;
+  transition: transform .2s ease-out, opacity .2s ease-out;
   color: white;
 }
-header div a:before {
-  content: ']';
-  left: -8%;
-}
-header div a:after {
+header .links a:before {
   content: '[';
-  left: 102%;
+  transform: translateX(-10px);
+}
+header .links a:after {
+  content: ']';
+  transform: translateX(10px);
 }
 
-header div a:hover:after, header div a:hover:before {
+header .links a:hover:after, header .links a:hover:before {
   opacity: 1;
-  transition: left .2s ease-out, opacity .2s ease-out;
+  transition: transform .2s ease-out, opacity .2s ease-out;
 }
 
-header div a:hover {
-  color: #87CBFF
+header .links a:hover:after {
+  transform: translateX(-10px);
+}
+header .links a:hover:before {
+  left: -15px;
+  transform: translateX(10px);
 }
 
-header div a:hover:after {
-  left: 110%;
+header .social {
+  float: left;
 }
-header div a:hover:before {
-  left: -16%;
+
+header .social a {
+  font-size: 0;
+  margin: 0 1rem;
+}
+
+header .social a:before {
+  font-size: 24px;
+}
+
+footer {
+  font-family: 'Mitra';
+}
+
+footer div {
+  float: right;
+  margin: 2.8rem 3rem 0;
+  color: white;
+  font-size: 1.5em;
+}
+
+footer div * {
+  color: white;
+  font-size: 1em;
+  margin: 0;
+  line-height: normal;
+}
+
+footer .quotes:before, footer .quotes:after {
+  position: relative;
+  opacity: .7;
+  transition: opacity .2s ease-out, left .2s ease-out;
+  left: 0;
+}
+
+footer .quotes:before {
+  top: -10px;
+}
+
+footer .quotes:after {
+  top: 10px;
+}
+
+footer .quotes:hover:before, footer .quotes:hover:after {
+  opacity: 1;
+  transition: opacity .2s ease-out, left .2s ease-out;
+}
+
+footer .quotes:hover:before {
+  left: 10px;
+}
+
+footer .quotes:hover:after {
+  left: -10px;
+}
+
+footer .quotes {
+  margin-right: 4rem;
+  margin-top: 1.8rem;
+}
+
+footer q {
+  font-size: 2em;
+  font-family: 'Mitra';
+}
+
+footer div:last-child {
+  float: left;
+}
+
+footer div:last-child p {
+  display: inline-block;
+}
+
+a[href='#top'] {
+  font-size: 0;
+  color: white;
+  float: left;
+  margin: .8rem 1rem;
+}
+
+a[href='#top']:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border: 8px transparent solid;
+  border-bottom-color: white;
+  transition: all .2s ease-out;
+}
+
+a[href='#top']:hover:before {
+  border-bottom-color: #87CBFF;
+  transition: all .2s ease-out;
 }
 
 main {
