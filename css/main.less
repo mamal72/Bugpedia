@@ -38,6 +38,10 @@
   transform: @arguments;;
 }
 
+a {
+  text-decoration: none;
+}
+
 a:focus {
   outline: none;
 }
@@ -54,6 +58,7 @@ body {
   background: #F1F4F9;
   font-family: 'Mitra' !important;
   direction: rtl;
+  cursor: default;
 }
 
 header, footer {
@@ -64,8 +69,8 @@ header, footer {
 header {
   
   .logo {
-    font-size: 6.4rem;
-    margin: 0.3em 2em 0.3em 1em;
+    font-size: 7.5rem;
+    margin: 0.15em 2em 0.3em 0.3em;
     color: #FFF;
     text-shadow: 1px 1px 8px #575757;
     float: right;
@@ -226,11 +231,53 @@ footer {
   
 }
 
+.post-wrapper, aside {
+  background: #fff;
+  margin: 2em 2em 2em 2em;
+  border-radius: 5px;
+}
+
+aside {
+  
+  padding: 1em 2em;
+  font-size: 1.5em;
+  ul {
+    list-style: none;
+  }
+  .rating {
+    direction: ltr;
+    font-size: 1em;
+    opacity: .7;
+    .transition(opacity);
+    
+    &:hover {
+      opacity: 1;
+      .transition(opacity);
+    }
+    span {
+      font-size: 1.5em;
+      margin: .5em;
+    }
+    a {
+      color: transparent;
+      font-size: 0;
+    }
+    a:first-of-type {
+      margin-right: 1rem;
+      
+      &:before {
+        color: #29C66D;
+        font-size: 1.2rem;
+      }
+    }
+    a:last-of-type:before {
+      color: #C42929;
+      font-size: 1.2rem;
+    }
+  }
+}
 
 .post-wrapper {
-  margin: 2em 2em 2em 0;
-  background: #fff;
-  border-radius: 5px;
   
   .title {
     font-weight: normal;
