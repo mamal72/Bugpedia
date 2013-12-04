@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'Mitra';
+  src: url('fonts/BMitra.eot?#') format('eot'), url('fonts/BMitra.woff') format('woff'), url('fonts/BMitra.ttf') format('truetype');
+  font-family: 'Yekan';
+  src: url('fonts/BYekan.eot?#') format('eot'), url('fonts/BYekan.woff') format('woff'), url('fonts/BYekan.ttf') format('truetype');
+  font-family: 'Titr';
+  src: url('fonts/BTitrBold.eot?#') format('eot'), url('fonts/BTitrBold.woff') format('woff'), url('fonts/BTitrBold.ttf') format('truetype');
+}
+a:focus {
+  outline: none;
+}
+*::-moz-focus-inner {
+  border: none;
+}
+html {
+  font-size: 10px;
+  font-family: 'Mitra';
+  direction: rtl;
+}
+body:extends(html) {
+  background: #F1F4F9;
+}
+header,
+footer {
+  height: 100px;
+  background: #2A80C9;
+}
+header .logo {
+  font-size: 4em;
+  margin: 0.3em 2em 0.3em 1em;
+  color: #FFF;
+  text-shadow: 1px 1px 8px #575757;
+  float: right;
+  -moz-transition: color 0.2s ease-out 0s;
+  -webkit-transition: color 0.2s ease-out 0s;
+  -o-transition: color 0.2s ease-out 0s;
+  -ms-transition: color 0.2s ease-out 0s;
+  -khtml-transition: color 0.2s ease-out 0s;
+  transition: color 0.2s ease-out 0s;
+  text-decoration: none;
+}
+header .logo:hover {
+  color: #87cbff;
+  -moz-transition: color 0.2s ease-out 0s;
+  -webkit-transition: color 0.2s ease-out 0s;
+  -o-transition: color 0.2s ease-out 0s;
+  -ms-transition: color 0.2s ease-out 0s;
+  -khtml-transition: color 0.2s ease-out 0s;
+  transition: color 0.2s ease-out 0s;
+}
+header div {
+  float: right;
+  margin: 1.6em 2em;
+  font-size: 2rem;
+}
+header a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  margin: 0 1em;
+  -moz-transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out 0s;
+  -o-transition: all 0.2s ease-out 0s;
+  -ms-transition: all 0.2s ease-out 0s;
+  -khtml-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+  cursor: pointer;
+  text-shadow: 1px 1px 8px #575757;
+}
+header a:hover {
+  color: #87cbff;
+  text-shadow: 1px 1px 8px #304856;
+  -moz-transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out 0s;
+  -o-transition: all 0.2s ease-out 0s;
+  -ms-transition: all 0.2s ease-out 0s;
+  -khtml-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+header a.links:before,
+header a.links:after {
+  display: inline-block;
+  font-size: .9em;
+  font-weight: bold;
+  opacity: 0;
+  -moz-transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out 0s;
+  -o-transition: all 0.2s ease-out 0s;
+  -ms-transition: all 0.2s ease-out 0s;
+  -khtml-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+  color: white;
+}
+header a.links:before {
+  content: '[';
+  -moz-transform: translateX(-10px);
+  -webkit-transform: translateX(-10px);
+  -o-transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
+  -khtml-transform: translateX(-10px);
+  transform: translateX(-10px);
+}
+header a.links:after {
+  content: ']';
+  -moz-transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+  -o-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  -khtml-transform: translateX(10px);
+  transform: translateX(10px);
+}
+header a:hover:after,
+header a:hover:before {
+  -moz-transition: transform 0.2s ease-out opacity 0.2s ease-out ease-out 0s;
+  -webkit-transition: transform 0.2s ease-out opacity 0.2s ease-out ease-out 0s;
+  -o-transition: transform 0.2s ease-out opacity 0.2s ease-out ease-out 0s;
+  -ms-transition: transform 0.2s ease-out opacity 0.2s ease-out ease-out 0s;
+  -khtml-transition: transform 0.2s ease-out opacity 0.2s ease-out ease-out 0s;
+  transition: transform 0.2s ease-out opacity 0.2s ease-out ease-out 0s;
+  opacity: 1;
+}
