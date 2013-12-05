@@ -40,10 +40,15 @@
 
 a {
   text-decoration: none;
+  
+  &:focus {
+    outline: none;
+  }
 }
 
-a:focus {
-  outline: none;
+.disabled {
+  color: gray;
+  cursor: not-allowed;
 }
 
 *::-moz-focus-inner {
@@ -241,37 +246,95 @@ aside {
   
   padding: 1em 2em;
   font-size: 1.5rem;
-  ul {
-    list-style: none;
+  
+  .title {
+    font-weight: bold;
+    text-indent: -1rem;
+    font-size: 1.7rem;
   }
-  .rating {
-    direction: ltr;
-    font-size: 1.5rem;
-    opacity: .7;
-    .transition(opacity);
-    
-    &:hover {
-      opacity: 1;
-      .transition(opacity);
-    }
-    span {
-      margin: .5em;
-    }
-    a {
-      color: transparent;
-      font-size: 0;
-    }
-    a:first-of-type {
-      margin-right: 1rem;
-      
-      &:before {
-        color: #29C66D;
-        font-size: .8rem;
+  div {
+    padding: .5rem;
+  }
+  .live ul {
+    list-style: none;
+    overflow: hidden;
+    height: 300px;
+    li {
+      border-bottom: 0.1rem dashed rgba(0,0,0,0.1);
+      padding-right: .5rem;
+      position: relative;
+      top: 0px;
+      height: 9.4rem;
+      padding-top: .5rem;
+      box-sizing: padding-box;
+      p {
+        margin: 0;
+      }
+      .rating {
+        direction: ltr;
+        font-size: 1.5rem;
+        opacity: .7;
+        position: absolute;
+        top: 6rem;
+        left: 0;
+        .transition(opacity);
+        
+        &:hover {
+          opacity: 1;
+          .transition(opacity);
+        }
+        span {
+          margin: .5em;
+        }
+        a {
+          color: transparent;
+          font-size: 0;
+        }
+        a:first-of-type {
+          margin-right: 1rem;
+          
+          &:before {
+            color: #29C66D;
+            font-size: .8rem;
+          }
+        }
+        a:last-of-type:before {
+          color: #C42929;
+          font-size: .8rem;
+        }
       }
     }
-    a:last-of-type:before {
-      color: #C42929;
-      font-size: .8rem;
+  }
+  .live .controls {
+    text-align: center;
+    a {
+      margin: 1rem;
+    }
+  }
+  
+  .cats ul {
+    list-style: none;
+    overflow: hidden;
+    
+    li {
+      display: block;
+      margin: .5rem;
+      padding: .5rem;
+      height: 2rem;
+      border-bottom: 1px dashed rgba(0,0,0,.1);
+      
+      &:hover a {
+        opacity: 1;
+        .transform(translateX(-10px));
+        .transition();
+      }
+      a {
+        display: inline-block;
+        color: #2A80C9;
+        margin: 0 1rem;
+        opacity: 0;
+        .transition();
+      }
     }
   }
 }
