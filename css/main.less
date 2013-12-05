@@ -427,32 +427,43 @@ aside {
   }
   
   .comments {
-    border: 1px solid gray;
+    border: 1px solid rgba(0,0,0,.1);
     box-sizing: border-box;
+    border-radius: 5px;
     padding: 2rem;
     font-size: 1.7rem;
     
-    label {
-      float: right;
-      display: block;
-      margin-bottom: .5rem;
-    }
-    input:not([type='submit']), textarea {
-      clear: right;
-      display: block;
-      width: 30rem;
-      border: 1px solid rgba(0,0,0,.1);
-      background: fade(@hoverColor, 5%);
-      resize: vertical;
-      padding: .5rem;
-      border-radius: 5px;
-      margin: 1rem 0;
-      &#email {
-        direction: ltr;
+    a:first-child {
+        float: right;
       }
-      &#content {
-        height: 10rem;
-        width: 95%;
+    form {
+      opacity: 0;
+      max-height: 0rem;
+      display: none;
+      overflow: hidden;
+      
+      label {
+        float: right;
+        display: block;
+        margin-bottom: .5rem;
+      }
+      input:not([type='submit']), textarea {
+        clear: right;
+        display: block;
+        width: 30rem;
+        border: 1px solid rgba(0,0,0,.1);
+        background: fade(@hoverColor, 5%);
+        resize: vertical;
+        padding: .5rem;
+        border-radius: 5px;
+        margin: 1rem 0;
+        &#email {
+          direction: ltr;
+        }
+        &#content {
+          height: 10rem;
+          width: 95%;
+        }
       }
     }
     

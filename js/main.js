@@ -38,4 +38,9 @@ $(document).ready(function() {
     })
   }
   
+  $('#newComment').click(function() {
+    $(this).remove();
+    $('.comments form').css('display','block').animate({'opacity':'1', 'max-height':'40rem'}, 'fast');
+  })
+  
 })
