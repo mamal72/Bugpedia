@@ -459,12 +459,12 @@ aside {
     ul {
       list-style: none;
       text-align: right;
+      margin-top: 5rem;
       
       li {
         margin: 2rem 0;
-        
         img {
-          border: 3px solid rgba(0,0,0,.2);
+          border: 3px solid rgba(0,0,0,.1);
           float: right;
         }
         p {
@@ -472,21 +472,35 @@ aside {
           padding: .5rem 4rem;
           border-right: 1px solid rgba(0,0,0,.2);
           
-          &:nth-of-type(2) {
-            padding-top: 2rem;
-          }
           &:first-of-type {
+            box-sizing: padding-box;
             font-size: 1.8rem;
-            margin: 1rem 2rem;
-            padding-right: 1rem;
+            padding: 2rem 4rem 0;
             float: right;
             border: none;
             color: @mainBlue;
+            height: 4.6rem;
+            width: 80%;
+            background: fade(@hoverColor,20%);
+          }
+          &:nth-of-type(2) {
+            padding-top: 3rem;
           }
           &:last-of-type {
-            padding-bottom: 2rem;
+            padding-bottom: 3rem;
             border-bottom: 1px solid rgba(0,0,0,.2);
           }
+          
+          span:last-child {
+            float: left;
+            font-size: 1.2rem;
+            margin-top: .5rem;
+          }
+        }
+        a:last-child {
+          float: left;
+          margin-top: -3.5rem;
+          margin-left: 1rem;
         }
         br {
           clear: right;
