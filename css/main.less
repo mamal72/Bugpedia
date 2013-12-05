@@ -40,9 +40,11 @@
 
 a {
   text-decoration: none;
-  
   &:focus {
     outline: none;
+  }
+  &:hover {
+    border-bottom: 1px dotted fade(@hoverColor, 80%);
   }
 }
 
@@ -73,6 +75,9 @@ header, footer {
 
 header {
   
+  *:hover {
+    border: none;
+  }
   .logo {
     font-size: 7.5rem;
     margin: 0.15em 2em 0.3em 0.3em;
@@ -84,6 +89,24 @@ header {
     &:hover {
       color: @hoverColor;
       .transition(color);
+      &:after {
+        background: @hoverColor;
+        color: white;
+        .transition();
+      }
+    }
+    &:after {
+      content: 'بتا';
+      position: absolute;
+      top: 0;
+      left: -1rem;
+      font-size: 1rem;
+      display: inline;
+      background: white;
+      padding: 0.2rem 0.5rem 0.4rem;
+      border-radius: .4rem;
+      color: #2A80C9;
+      .transition();
     }
   }
   
@@ -92,33 +115,38 @@ header {
     margin: 1.8em 2em;
     font-size: 2rem;
     
-    &.links a:before, &.links a:after {
+    &.links {
+      a:before, &.links a:after {
       display: inline-block;
       font-size: .9em;
       font-weight: bold;
       opacity: 0;
       .transition();
       color: white;
+      }
+      a:after {
+        content: ']';
+        .transform(translateX(10px));
+      }
+      a:before {
+        content: '[';
+        .transform(translateX(-10px));
+      }
+      
+      a:hover {
+        &:after, &:before {
+          .transition(transform .2s ease-out, opacity .2s ease-out);
+          opacity: 1;
+        }
+        &:after {
+          .transform(translateX(-10px));
+        }
+        &:before {
+          .transform(translateX(10px));
+        }
+      }
     }
-    
-    &.links a:before {
-      content: '[';
-      .transform(translateX(-10px));
-    }
-    &.links a:after {
-      content: ']';
-      .transform(translateX(10px));
-    }
-    a:hover:after, a:hover:before {
-      .transition(transform .2s ease-out, opacity .2s ease-out);
-      opacity: 1;
-    }
-    a:hover:after {
-      .transform(translateX(-10px));
-    }
-    a:hover:before {
-      .transform(translateX(10px));
-    }
+
     &.social {
       float: left;
       
@@ -161,9 +189,9 @@ header {
 
 
 footer {
-  
+  position: relative;
   div {
-    float: right;
+    display: inline-block;
     margin: 4rem 3rem 0;
     color: white;
     font-size: 2em;
@@ -173,6 +201,10 @@ footer {
       font-size: 1em;
       margin: 0;
       line-height: normal;
+    }
+    
+    &:first-child {
+      float: right;
     }
     
     &.quotes:before, &.quotes:after {
@@ -216,8 +248,10 @@ footer {
       font-size: 0;
       color: white;
       float: left;
-      margin: .8rem 1rem;
-      
+      margin: 1.2rem 1rem;
+      &:hover {
+        border: none;
+      }
       &:before {
         content: '';
         width: 0;
@@ -231,6 +265,29 @@ footer {
         border-bottom-color: @hoverColor;
         .transition();
       }
+    }
+        
+    &.links {
+      position: absolute;
+      left: 50%;
+      margin-left: -19.5rem;
+      text-align: center;
+      ul {
+       list-style: none;
+        text-align: center;
+        li {
+          display: inline-block;
+          margin: 0 2rem;
+        }
+      }
+    }
+    
+    &.copyright {
+      position: absolute;
+      font-size: 1.3rem;
+      top: 4rem;
+      left: 50%;
+      margin-left: -7.5rem;
     }
   }
   
