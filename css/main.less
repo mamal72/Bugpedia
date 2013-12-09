@@ -39,6 +39,16 @@
   transform: @arguments;;
 }
 
+.separator(@mode) when(@mode = top) {
+  border-top: 0.1rem dashed rgba(0,0,0,.1);
+}
+.separator() {
+  border-bottom: 0.1rem dashed rgba(0,0,0,.1);
+}
+.radius() {
+  border-radius: 0.5rem;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -46,16 +56,16 @@ a {
     outline: none;
   }
   &:hover {
-    border-bottom: 1px dotted fade(@hoverColor, 80%);
+    border-bottom: 0.1rem dotted fade(@hoverColor, 80%);
   }
 }
 
 button, input[type='submit'], input[type='button'], .button {
   width: 20rem;
   background: @mainBlue;
-  border-radius: .5rem;
+  .radius();
   color: white;
-  border: 1px solid rgba(0,0,0,.2);
+  border: 0.1rem solid rgba(0,0,0,.2);
   padding: .2rem;
   .transition();
   &:hover {
@@ -107,7 +117,7 @@ header {
     font-size: 7.5rem;
     margin: 0.15em 2em 0.3em 0.3em;
     color: #FFF;
-    text-shadow: 1px 1px 8px #575757;
+    text-shadow: 0.1rem 0.1rem 0.8rem #575757;
     float: right;
     .transition(color);
     text-decoration: none;
@@ -129,9 +139,10 @@ header {
       display: inline;
       background: white;
       padding: 0.2rem 0.5rem 0.4rem;
-      border-radius: .4rem;
+      .radius();
       color: @mainBlue;
       .transition();
+      box-shadow: 0.1rem 0.1rem 0.8rem #575757;
     }
   }
   
@@ -151,11 +162,11 @@ header {
       }
       a:after {
         content: ']';
-        .transform(translateX(10px));
+        .transform(translateX(1rem));
       }
       a:before {
         content: '[';
-        .transform(translateX(-10px));
+        .transform(translateX(-1rem));
       }
       
       a:hover {
@@ -164,10 +175,10 @@ header {
           opacity: 1;
         }
         &:after {
-          .transform(translateX(-10px));
+          .transform(translateX(-1rem));
         }
         &:before {
-          .transform(translateX(10px));
+          .transform(translateX(1rem));
         }
       }
     }
@@ -200,11 +211,11 @@ header {
     margin: 0 1em;
     .transition();
     cursor: pointer;
-    text-shadow: 1px 1px 8px #575757;
+    text-shadow: 0.1rem 0.1rem 0.8rem #575757;
     
     &:hover {
       color: @hoverColor;
-      text-shadow: 1px 1px 8px #304856;
+      text-shadow: 0.1rem 0.1rem 0.8rem #304856;
       .transition();
     }
     
@@ -239,20 +250,20 @@ footer {
       left: 0;
     }
     &.quotes:before {
-      top: -10px;
+      top: -1rem;
     }
     &.quotes:after {
-      top: 10px;
+      top: 1rem;
     }
     &.quotes:hover:after, &.quotes:hover:before {
       opacity: 1;
       .transition();
     }
     &.quotes:hover:after {
-      left: -10px;
+      left: -1rem;
     }
     &.quotes:hover:before {
-      left: 10px;
+      left: 1rem;
     }
     &.quotes {
       margin-right: 4rem;
@@ -281,7 +292,7 @@ footer {
         content: '';
         width: 0;
         height: 0;
-        border: 8px transparent solid;
+        border: 0.8rem transparent solid;
         border-bottom-color: white;
         .transition();
       }
@@ -307,7 +318,7 @@ footer {
       font-size: 1.3rem;
       top: 4rem;
       left: 50%;
-      margin-left: -7.5rem;
+      margin-left: -8.3rem;
     }
   }
   
@@ -316,7 +327,7 @@ footer {
 .post-wrapper, aside {
   background: #fff;
   margin: 2em 2em 2em 2em;
-  border-radius: 5px;
+  .radius;
 }
 
 aside {
@@ -335,12 +346,12 @@ aside {
   .live ul {
     list-style: none;
     overflow: hidden;
-    height: 300px;
+    height: 30rem;
     li {
-      border-bottom: 0.1rem dashed rgba(0,0,0,0.1);
+      .separator();
       padding-right: .5rem;
       position: relative;
-      top: 0px;
+      top: 0;
       height: 9.4rem;
       padding-top: .5rem;
       box-sizing: padding-box;
@@ -398,11 +409,11 @@ aside {
       margin: .5rem;
       padding: .5rem;
       height: 2rem;
-      border-bottom: 1px dashed rgba(0,0,0,.1);
+      .separator();
       
       &:hover a {
         opacity: 1;
-        .transform(translateX(-10px));
+        .transform(translateX(-1rem));
         .transition();
       }
       a {
@@ -423,8 +434,9 @@ aside {
     font-size: 2.5rem;
   }
   
-  .content {
+  p {
     font-size: 1.7rem;
+    text-align: right;
   }
   
   .meta {
@@ -446,8 +458,7 @@ aside {
     text-align: right;
     font-size: 1.5rem;
     padding: 1rem 1rem 3rem;
-    border: 1px solid rgba(0,0,0,.1);
-    border-radius: 5px;
+    .separator(top);
     margin: 2rem 0;
     img, a:first-of-type {
       display: inline-block;
@@ -473,13 +484,12 @@ aside {
   }
   
   .comments {
-    border: 1px solid rgba(0,0,0,.1);
+    margin: 2rem 0;
     box-sizing: border-box;
-    border-radius: 5px;
+    .separator(top);
     padding: 2rem;
     font-size: 1.7rem;
     text-align: right;
-    margin-bottom: 2rem;
     & > p {
       display: inline-block;
       float: left;
@@ -501,11 +511,11 @@ aside {
         clear: right;
         display: block;
         width: 30rem;
-        border: 1px solid rgba(0,0,0,.1);
+        border: 0.1rem solid rgba(0,0,0,.1);
         background: fade(@hoverColor, 5%);
         resize: vertical;
         padding: .5rem;
-        border-radius: 5px;
+        .radius();
         margin: 1rem 0;
         &#email {
           direction: ltr;
@@ -525,14 +535,14 @@ aside {
       li {
         margin: 2rem 0;
         img {
-          border: 3px solid rgba(0,0,0,.1);
+          border: 0.3rem solid rgba(0,0,0,.1);
           float: right;
-          border-top-right-radius: 5px;
+          border-top-right-radius: 0.5rem;
         }
         p {
           margin: 0;
-          padding: .5rem 4rem;
-          border-right: 1px solid rgba(0,0,0,.2);
+          padding: 0.5rem 4rem;
+          border-right: 0.1rem solid rgba(0,0,0,.2);
           
           &:first-of-type {
             box-sizing: padding-box;
@@ -544,16 +554,16 @@ aside {
             height: 4.6rem;
             width: 80%;
             background: fade(@hoverColor,20%);
-            border-top-left-radius: 5px;
+            border-top-left-radius: 0.5rem;
           }
           &:nth-of-type(2) {
             padding-top: 3rem;
           }
           &:last-of-type {
             padding-bottom: 3rem;
-            border-bottom: 1px solid rgba(0,0,0,.2);
-            border-bottom-right-radius: 5px;
-            //border-bottom-left-radius: 5px;
+            border-bottom: 0.1rem solid rgba(0,0,0,.2);
+            border-bottom-right-radius: 0.5rem;
+            //border-bottom-left-radius: 0.5rem;
           }
           
           span:last-child {
