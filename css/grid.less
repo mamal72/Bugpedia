@@ -1,0 +1,49 @@
+/*Media query variable break points*/
+
+@all: ~"only screen";
+@small: ~"only screen and (max-width: 40em)"; //max-width 640px, mobile-only styles
+@medium: ~"only screen and (min-width: 40.063em) and (max-width: 64em)"; //min-width 641px and max-width 1024px, tablet styles
+@large: ~"only screen and (min-width: 64.063em)"; //min-width 1025px, desktop styles, large screens
+
+/*-----*/
+
+/*Base variables*/
+
+@baseColumns: 12;
+@basePadding: 1em;
+@basePadding: 5px;
+@baseFontFamily: ~"'Yekan', tahoma, sans-serif";
+@baseFontSize: 16px;
+@direction: rtl;
+
+/*-----*/
+
+.column(@cols: @baseColumns; @totalColumns: @baseColumns; @colPadding: @basePadding) {
+	width: percentage(@cols)/@totalColumns;
+	padding: @colPadding;
+}
+
+
+@media @all {
+	.test {
+		height: 200px;
+		.column(7,10,30px 20px);
+		font-family: @baseFontFamily;
+	}
+	.test2 {
+		height: 100px;
+		.column(8);
+	}
+}
+
+@media @small {
+
+}
+
+@media @medium {
+
+}
+
+@media @large {
+	
+}
