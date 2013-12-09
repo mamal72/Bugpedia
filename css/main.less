@@ -1,3 +1,5 @@
+@import 'grid.less';
+
 @font-face {
 	font-family: 'Mitra';
 	src: url('fonts/BMitra.eot?#') format('eot'),  /* IE6–8 */
@@ -16,10 +18,6 @@
 	url('fonts/BTitrBold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 	url('fonts/BTitrBold.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
 }
-
-
-@hoverColor: #87CBFF;
-@mainBlue: #2A80C9;
 
 .transition(@property: all; @duration: 0.2s; @ease: ease-out; @delay: 0s) {
   -moz-transition: @arguments;
@@ -56,13 +54,13 @@ a {
     outline: none;
   }
   &:hover {
-    border-bottom: 0.1rem dotted fade(@hoverColor, 80%);
+    border-bottom: 0.1rem dotted fade(@hover, 80%);
   }
 }
 
 button, input[type='submit'], input[type='button'], .button {
   width: 20rem;
-  background: @mainBlue;
+  background: @blue;
   .radius();
   color: white;
   border: 0.1rem solid rgba(0,0,0,.2);
@@ -71,13 +69,13 @@ button, input[type='submit'], input[type='button'], .button {
   &:hover {
     border-color: rgba(0,0,0,.5);
     box-shadow: 0 0 1rem rgba(0,0,0,.2) inset;
-    background: darken(@mainBlue,2%);
+    background: darken(@blue,2%);
     color: darken(white,2%);
     .transition();
   }
   &:focus {
     box-shadow: 0 0 .5rem rgba(0,0,0,.4) inset;
-    background: darken(@mainBlue,7%);
+    background: darken(@blue,7%);
     color: darken(white,7%);
   }
 }
@@ -97,7 +95,7 @@ html {
 
 body {
   background: #F1F4F9;
-  font-family: 'Mitra' !important;
+  font-family: @baseFont;
   direction: rtl;
   cursor: default;
   color: #525252;
@@ -105,7 +103,7 @@ body {
 
 header, footer {
   height: 10rem;
-  background: @mainBlue;
+  background: @blue;
 }
 
 header {
@@ -122,10 +120,10 @@ header {
     .transition(color);
     text-decoration: none;
     &:hover {
-      color: @hoverColor;
+      color: @hover;
       .transition(color);
       &:after {
-        background: @hoverColor;
+        background: @hover;
         color: white;
         .transition();
       }
@@ -140,7 +138,7 @@ header {
       background: white;
       padding: 0.2rem 0.5rem 0.4rem;
       .radius();
-      color: @mainBlue;
+      color: @blue;
       .transition();
       box-shadow: 0.1rem 0.1rem 0.8rem #575757;
     }
@@ -197,7 +195,7 @@ header {
           .transition(color);
         }
         &:hover:before {
-          color: @hoverColor;
+          color: @hover;
           .transition(color);
         }
       }
@@ -214,7 +212,7 @@ header {
     text-shadow: 0.1rem 0.1rem 0.8rem #575757;
     
     &:hover {
-      color: @hoverColor;
+      color: @hover;
       text-shadow: 0.1rem 0.1rem 0.8rem #304856;
       .transition();
     }
@@ -270,7 +268,7 @@ footer {
       margin-top: 1.8rem;
     }
     q {
-      font-family: 'Mitra';
+      font-family: @baseFont;
       font-size: 4rem;
     }
     &:last-child {
@@ -298,7 +296,7 @@ footer {
       }
       
       &:hover:before {
-        border-bottom-color: @hoverColor;
+        border-bottom-color: @hover;
         .transition();
       }
     }
@@ -418,7 +416,7 @@ aside {
       }
       a {
         display: inline-block;
-        color: @mainBlue;
+        color: @blue;
         margin: 0 1rem;
         opacity: 0;
         .transition();
@@ -512,7 +510,7 @@ aside {
         display: block;
         width: 30rem;
         border: 0.1rem solid rgba(0,0,0,.1);
-        background: fade(@hoverColor, 5%);
+        background: fade(@hover, 5%);
         resize: vertical;
         padding: .5rem;
         .radius();
@@ -550,10 +548,10 @@ aside {
             padding: 2rem 4rem 0;
             float: right;
             border: none;
-            color: @mainBlue;
+            color: @blue;
             height: 4.6rem;
             width: 80%;
-            background: fade(@hoverColor,20%);
+            background: fade(@hover,20%);
             border-top-left-radius: 0.5rem;
           }
           &:nth-of-type(2) {
