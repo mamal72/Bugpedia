@@ -117,7 +117,7 @@ header {
   *:hover {
     border: none;
   }
-  .logo {
+  .logo, #logo {
     font-size: 7.5rem;
     margin: 0.15em 2em 0.3em 0.3em;
     color: #FFF;
@@ -252,6 +252,7 @@ footer {
       opacity: .7;
       .transition();
       left: 0;
+      font-size: 2rem;
     }
     &.quotes:before {
       top: -1rem;
@@ -276,8 +277,11 @@ footer {
     q {
       font-family: @baseFont;
       font-size: 4rem;
+      quotes: none;
+      padding: 0 1rem;
     }
     &:last-child {
+      font-size: 1.6rem;
       float: left;
       p {
         display: inline-block;
@@ -312,6 +316,7 @@ footer {
       left: 50%;
       margin-left: -7rem;
       text-align: center;
+      font-size: 1.6rem;
       a {
         margin: 0 1rem;
       }
@@ -426,7 +431,7 @@ aside {
 }
 
 .post-wrapper {
-  .column(6);
+  .column(6.5);
   > div {
     .column(10);
     .radius();
@@ -590,5 +595,5 @@ aside {
   }
 }
 .sidebar {
-  .column(4);
+  .column(3.5);
 }
