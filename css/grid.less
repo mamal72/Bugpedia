@@ -9,17 +9,20 @@
 
 /*Base variables*/
 
-@baseColumns: 12;
+@baseColumns: 10;
 @basePadding: 0.5rem;
-@baseFont: ~"'Mitra', tahoma, sans-serif";
+@baseFont: ~"Mitra, tahoma, sans-serif";
 @baseFontSize: 1.6rem;
 @hover: #87CBFF;
 @blue: #2A80C9;
 
 /*-----*/
 
-.column(@cols: @baseColumns; @totalColumns: @baseColumns; @colPadding: @basePadding) {
-  display: inline-block;
-  width: percentage(@cols)/@totalColumns;
-  padding: @colPadding;
+.column(@cols: @baseColumns; @totalColumns: @baseColumns;) {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+	vertical-align: top;
+	width: percentage(@cols)/@totalColumns;
 }
